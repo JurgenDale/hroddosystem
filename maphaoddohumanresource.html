@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>Odoo</title>
+        <link type="image/x-icon" rel="shortcut icon" href="/web/static/img/favicon.ico"/>
+        <script id="web.layout.odooscript" type="text/javascript">
+            var odoo = {
+                csrf_token: "f62e7c0142c23199b593e3a58e2c96dadf9da6a6o1720264566",
+                debug: "assets",
+            };
+        </script>
+        <link rel="manifest" href="/web/manifest.webmanifest" crossorigin="use-credentials"/>
+        <link rel="apple-touch-icon" href="/web_enterprise/static/img/odoo-icon-ios.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <meta name="theme-color" content="#242733"/>
+        <script type="text/javascript">
+            odoo.__session_info__ = {
+                "uid": 2,
+                "is_system": true,
+                "is_admin": true,
+                "user_context": {
+                    "lang": "en_US",
+                    "tz": "Pacific/Port_Moresby",
+                    "uid": 2
+                },
+                "db": "madangprovincialhealthauthority",
+                "server_version": "saas~16.3+e",
+                "server_version_info": ["saas~16", 3, 0, "final", 0, "e"],
+                "support_url": "https://www.odoo.com/help",
+                "name": "Jurgen Dale",
+                "username": "ict@madangpha.org",
+                "partner_display_name": "Jurgen Dale",
+                "company_id": 1,
+                "partner_id": 3,
+                "web.base.url": "https://madangprovincialhealthauthority.odoo.com",
+                "active_ids_limit": 20000,
+                "profile_session": null,
+                "profile_collectors": null,
+                "profile_params": null,
+                "max_file_upload_size": 134217728,
+                "home_action_id": false,
+                "cache_hashes": {
+                    "translations": "7226afa9054fc2a66b0e3a8b74a806bce83dc4e1",
+                    "load_menus": "f07ac0848ceae41a0c6acee1e811a0a5d9ba915f297d6da37943332aa7552dce"
+                },
+                "currencies": {
+                    "156": {
+                        "symbol": "K",
+                        "position": "after",
+                        "digits": [69, 2]
+                    }
+                },
+                "bundle_params": {
+                    "lang": "en_US",
+                    "debug": "assets"
+                },
+                "user_companies": {
+                    "current_company": 1,
+                    "allowed_companies": {
+                        "1": {
+                            "id": 1,
+                            "name": "MadangProvincialHealthAuthority",
+                            "sequence": 0,
+                            "timesheet_uom_id": 4,
+                            "timesheet_uom_factor": 1.0
+                        }
+                    }
+                },
+                "show_effect": true,
+                "display_switch_company_menu": false,
+                "user_id": [2],
+                "web_tours": [],
+                "tour_disable": false,
+                "notification_type": "email",
+                "warning": "admin",
+                "expiration_date": "2023-07-23 10:57:33",
+                "expiration_reason": "trial",
+                "map_box_token": false,
+                "odoobot_initialized": true,
+                "iap_company_enrich": false,
+                "odoo_website_url": "https://www.odoo.com",
+                "ocn_token_key": false,
+                "fcm_project_id": false,
+                "inbox_action": 114,
+                "uom_ids": {
+                    "4": {
+                        "id": 4,
+                        "name": "Hours",
+                        "rounding": 0.01,
+                        "timesheet_widget": "float_time"
+                    }
+                }
+            };
+            odoo.reloadMenus = ()=>fetch(`/web/webclient/load_menus/${odoo.__session_info__.cache_hashes.load_menus}`).then(res=>res.json());
+            odoo.loadMenusPromise = odoo.reloadMenus();
+            // Block to avoid leaking variables in the script scope
+            {
+                const {user_context, cache_hashes} = odoo.__session_info__;
+                // Prefetch translations to speedup webclient. This is done in JS because link rel="prefetch"
+                // is not yet supported on safari.
+                fetch(`/web/webclient/translations/${cache_hashes.translations}?lang=${user_context.lang}`);
+            }
+        </script>
+        <link type="text/css" rel="stylesheet" href="/web/assets/debug/web.dark_mode_assets_common.css" data-asset-bundle="web.dark_mode_assets_common" data-asset-version="71e97f7"/>
+        <link type="text/css" rel="stylesheet" href="/web/assets/debug/web.dark_mode_assets_backend.css" data-asset-bundle="web.dark_mode_assets_backend" data-asset-version="fc72a76"/>
+        <script type="text/javascript" src="/web/assets/debug/web.assets_common.js" data-asset-bundle="web.assets_common" data-asset-version="e3d532f" onerror="__odooAssetError=1"></script>
+        <script type="text/javascript" src="/web/assets/debug/web.assets_backend.js" data-asset-bundle="web.assets_backend" data-asset-version="21ced45" onerror="__odooAssetError=1"></script>
+        <script type="text/javascript" src="/web/assets/debug/web.assets_backend_prod_only.js" data-asset-bundle="web.assets_backend_prod_only" data-asset-version="45e946d" onerror="__odooAssetError=1"></script>
+    </head>
+    <body class="o_web_client"></body>
+</html>
